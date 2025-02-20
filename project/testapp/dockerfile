@@ -1,0 +1,30 @@
+FROM node:20
+
+WORKDIR /myapp
+
+COPY . .
+
+RUN npm install
+
+EXPOSE 3000
+
+CMD ["npm", "start"]
+
+
+# FROM node
+
+# ENV MONGO_DB_USERNAME=admin
+#     MONGO_DB_PWD=qwerty
+
+# RUN mkdir -p testapp
+
+# COPY ./testapp
+# RUN npm install
+
+# CMD ["node", "/testapp/server.js"]
+
+
+# docker build -t testapp:1.0. ->command of create docker image
+# docker run testapp:1.0 ->command to create docker container
+# docker run -it testapp:1.0 bash->command to create docker container in interactive mode
+
